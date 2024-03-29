@@ -32,6 +32,8 @@ form input {
   margin: 16px 0 24px 0;
   padding: 16px 24px;
   line-height: 24px;
+  border: 1px solid;
+  border-color: var(--gray100);
 }
 
 form input:focus {
