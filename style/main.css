@@ -17,7 +17,7 @@ body {
   font-size: 24px;
 }
 
-main{
+main {
   margin-top: 70px;
 }
 
@@ -33,17 +33,6 @@ nav {
   padding: 10px 200px 10px;
 }
 
-footer {
-  display: flex;
-  justify-content: space-between;
-  background-color: #111827;
-  padding: 32px 200px 108px 200px;
-  color: #676767;
-  gap: 10px;
-  width: 100%;
-  font-size: 16px;
-}
-
 .panda-login {
   cursor: pointer;
   background-color: var(--brandblue);
@@ -51,7 +40,6 @@ footer {
   padding: 12px 20px;
   width: 128px;
   height: 48px;
-
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -65,18 +53,11 @@ footer {
   background-color: var(--maincolor);
 }
 
-.panda-banner span{
+.panda-banner span {
   display: block;
   color: #374151;
 }
 
-/*
-1. 데스크탑 -> 모바일로 가는 순서로는 max-width를 사용해서 해야 한다. 겹치지 않을 거면 min-width를 같이 사용하자
-2. 
-
-
-
-*/
 .panda-banner div {
   display: flex;
   align-items: flex-start;
@@ -141,27 +122,36 @@ footer {
   margin-left: 64px;
 }
 
-
-.info-badge{
-  color: var(--brandblue);
-  margin-bottom: 12px;
-}
-
-.info-title{
-  margin: 12px 0px 24px 0px;
-  line-height: 56px;
-}
-
-.info-title span{
-  display: block;
-}
-
 .pander-info-center {
   width: 588px;
   text-align: right;
   margin-right: 64px;
 }
 
+.info-badge {
+  color: var(--brandblue);
+  margin-bottom: 12px;
+}
+
+.info-title {
+  margin: 12px 0px 24px 0px;
+  line-height: 56px;
+}
+
+.info-title span {
+  display: block;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  background-color: #111827;
+  padding: 32px 200px 108px 200px;
+  color: #676767;
+  gap: 10px;
+  width: 100%;
+  font-size: 16px;
+}
 
 .footer-link {
   display: flex;
@@ -202,13 +192,10 @@ footer {
 
   .panda-banner div {
     text-align: center;
-    display: flex;
-    flex-direction: column;
     justify-content: flex-start;
     align-items: center;
     padding: 84px 116px;
     line-height: 56px;
-    width: 100%;
   }
 
   #buypanda,
@@ -222,7 +209,7 @@ footer {
     margin: 24px;
   }
 
-  .pander-main:nth-child(3) div{
+  .pander-main:nth-child(3) div {
     order: 2;
     text-align: left;
   }
@@ -231,8 +218,6 @@ footer {
     max-width: none;
     width: 100%;
     height: 100%;
-    padding: 0px;
-    border-radius: 12px;
     margin-bottom: 20px;
   }
 
@@ -244,32 +229,28 @@ footer {
 
   .pander-info-center {
     width: 100%;
-    text-align: right;
     margin: 0 0 64px 0;
   }
 
-  .pander-info span{
+  .pander-info span {
     margin-bottom: 12px;
   }
 
-  .panda-banner span{
+  .panda-banner span {
     display: inline;
   }
 
-  .info-title{
+  .info-title {
     margin-bottom: 20px;
   }
-  
-  .info-title span{
+
+  .info-title span {
     display: inline;
   }
 
   footer {
     padding: 32px 104px 108px 104px;
   }
-
-
-
 }
 
 /* Mobile : 375px ~ 767px */
@@ -278,14 +259,11 @@ footer {
   nav {
     padding: 10px 16px;
   }
-  
+
   .item-button {
-    border-radius: 40px;
-    font-weight: 600;
     font-size: 16px;
     line-height: 19px;
     padding: 14px 34px;
-    margin-top: 32px;
   }
 
   .panda-banner {
@@ -298,17 +276,13 @@ footer {
     width: 100%;
   }
 
-  .panda-banner span{
-    font-size: 32px;
+  .panda-banner span {
     display: block;
+    font-size: 32px;
   }
 
   .pander-main {
     flex-direction: column;
-    margin: 24px;
-  }
-  
-  .pander-main {
     margin: 52px 16px;
   }
 
@@ -318,12 +292,8 @@ footer {
     height: 160px;
   }
 
-  .footer-copyright{
+  .footer-copyright {
     position: absolute;
     bottom: 32px;
   }
 }
-
-/* flex box의 order 속성 사용 
-  break point 사용
-*/
