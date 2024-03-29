@@ -15,7 +15,7 @@ a{
 body {
   background-color: #ffffff;
   color: #374151;
-  font-size: 1.25vw;
+  font-size: 24px;
   margin: 0;
 }
 
@@ -25,54 +25,52 @@ nav{
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  height: 3.65vw;
+  height: 70px;
   background-color: #ffffff;
-  padding: 0.5vw 10vw 0.5vw;
+  padding: 10px 200px 10px;
 }
 
-nav img{
-  width: 8vw;
-}
+
 
 footer{
   display: flex;
   justify-content: space-between ;
   background-color: #111827;
-  padding: 1.67vw 10.42vw 5.63vw 10.42vw;
+  padding: 32px 200px 108px 200px;
   color: #9ca3af;
-  gap: 0.52vw;
+  gap: 10px;
   width: 100%;
-  font-size: 0.83vw;
 }
 
 .panda-login{
   cursor: pointer;
   background-color: var(--brandblue);
-  border-radius: 0.42vw;
-  padding: 0.63vw 1.04vw;
-  width: 6.67vw;
-  height: 2.50vw;
+  border-radius: 8px;
+  padding: 12px 20px;
+  width: 128px;
+  height: 48px;
 
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  font-size: 0.83vw;
+  font-size: 16px;
   font-weight: 600;
   color: #ffffff;
 }
 
+
 .panda-banner{
   display: flex;
   justify-content: center;
-  padding: 8.85vw 11.61vw 0.00vw 18.75vw;
+  padding: 170px 224px 0px 360px;
   background-color: var(--maincolor);
-  line-height: 2.92vw;
+  line-height: 56px;
 }
 
 
 .panda-banner img{
-  width: 51.88vw;
-  height: 23.33vw;
+  width: 996px;
+  height: 448px;
 }
 
 .item-button{
@@ -81,11 +79,11 @@ footer{
   justify-content: center;
   background-color: var(--brandblue);
   color: #ffffff;
-  border-radius: 2.08vw;
+  border-radius: 40px;
   font-weight: 600;
-  font-size: 1.04vw;
-  line-height: 1.25vw;
-  padding: 0.83vw;
+  font-size: 20px;
+  line-height: 24px;
+  padding: 16px;
 }
 
 .panda-login:hover, .item-button:hover{
@@ -97,26 +95,26 @@ footer{
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 7.19vw 18.75vw 7.19vw 18.75vw;
+  margin: 138px 360px 138px 360px;
 }
 
 .pander-img{
   flex: 1 0 50%;
-  max-width: 30.63vw;
-  height: 23.13vw;
-  padding: 0.00vw auto 0.00vw auto;
-  border-radius: 0.63vw;
+  max-width: 588px;
+  height: 444px;
+  padding: 0px auto 0px auto;
+  border-radius: 12px;
 }
 
 .pander-info{
-  width: 30.63vw;
-  margin-left: 3.33vw;
+  width: 588px;
+  margin-left: 64px;
 }
 
 .pander-info-center{
-  width: 30.63vw;
+  width: 588px;
   text-align: right;
-  margin-right: 3.33vw;
+  margin-right: 64px;
 }
 
 .footer-link{
@@ -130,10 +128,10 @@ footer{
 .footer-sns{
   display: flex;
   justify-content: space-between;
-  width: 6.04vw;
+  width: 116px;
 }
 
 .footer-sns img{
-  width: 0.94vw;
-  height: 0.94vw;
+  width: 18px;
+  height: 18px;
 }
