@@ -37,25 +37,35 @@
       <section>
         <label>이메일</label>
         <input
-          type="email"
+          type="text"
           name="userName"
           placeholder="이메일을 입력해주세요"
           class="input-email"
-          required
           autofocus
         />
       </section>
+      <div class="none-email hide">
+        이메일을 입력해주세요.
+      </div>
+      <div class="fail-email hide">
+        잘못된 이메일 형식입니다.
+      </div>
       <section class="password-section">
         <label class="login-form__label">비밀번호</label>
         <input
           type="password"
           name="userPassword"
           placeholder="비밀번호를 입력해주세요"
-          required
           class="input-password"
         />
         <img src="/img/Property 1=Default.png" alt="" class="password-img" />
       </section>
+      <div class="none-password hide">
+        비밀번호를 입력해주세요.
+      </div>
+      <div class="fail-password hide">
+        비밀번호는 8자 이상이어야 하며, 숫자/대문자/소문자/특수문자를 모두 포함해야 합니다.
+      </div>
       <button type="submit">로그인</button>
     </form>
     <div class="social">
@@ -81,6 +91,6 @@
       판다마켓이 처음이신가요?
       <a href="/signup.html">회원가입</a>
     </div>
-    <script src="login.js"></script>
+    <script src="js/login.js"></script>
   </body>
 </html>
