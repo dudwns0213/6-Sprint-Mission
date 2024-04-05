@@ -4,12 +4,8 @@
   border: none;
 }
 
-.hide {
-  display: none;
-}
-
 .error {
-  border-color: #F74747;
+  border-color: #f74747;
 }
 
 .success {
@@ -30,7 +26,7 @@ header {
   margin: 60px 0 40px 0;
 }
 
-section{
+section {
   margin-top: 24px;
 }
 
@@ -56,10 +52,10 @@ form input {
   border-color: var(--gray100);
 }
 
-form div{
+form div {
   font-size: 15px;
   font-weight: 600;
-  color: #BF010A;
+  color: #bf010a;
   margin: 8px 0 0 16px;
 }
 
@@ -83,7 +79,7 @@ form button {
   font-weight: 600;
   line-height: 24px;
   transition: all 0.5s;
-  margin-top:24px;
+  margin-top: 24px;
 }
 
 .social {
@@ -135,7 +131,8 @@ form button {
   position: relative;
 }
 
-.password-img {
+.password-img1,
+.password-img2 {
   position: absolute;
   top: 52px;
   right: 24px;
