@@ -45,6 +45,7 @@ export function checkpassword(password, passworderror) {
 export function checkname(name, nameerror) {
   if (noneNameCheck(name.value) === false) {
     name.classList.add("error");
+    name.classList.remove("success");
     nameerror.style.display = "block";
     nameerror.textContent = errorMessage.none_name;
   } else {
