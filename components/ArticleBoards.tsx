@@ -8,6 +8,8 @@ import styles from "@/styles/ArticleBoards.module.css";
 import search from "@/public/search.svg";
 import Image from "next/image";
 
+import { getArticle } from "@/pages/api/api";
+
 export default function ArticleBoards() {
   const [article, setArticle] = useState<ArticleType[]>([]);
   const [keyword, setKeyword] = useState("");
@@ -16,22 +18,18 @@ export default function ArticleBoards() {
   const [page, setPage] = useState(1);
   const [pageSize, setPageSize] = useState(10);
 
-  async function getArticle() {
-    const res = await axios.get(
-      `/articles?page=${page}&pageSize=${pageSize}&orderBy=${orderby}&keyword=${keyword}`
-    );
-
-    const articlelist = res.data.list;
-    setArticle(articlelist);
+  async function fetchArticle() {
+    const articleList = await getArticle(page, pageSize, orderby, keyword);
+    setArticle(articleList);
   }
 
   useEffect(() => {
-    getArticle();
+    fetchArticle();
   }, [page, pageSize, orderby]);
 
   const handleKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
     if (event.key === "Enter") {
-      getArticle();
+      fetchArticle();
     }
   };
 
