@@ -9,12 +9,7 @@ interface ArticleProps {
   article: ArticleType;
 }
 
-interface ArticleListProps {
-  //게시글 목록
-  articleList: ArticleType[];
-}
-
-function Article({ article }: ArticleProps) {
+export default function Article({ article }: ArticleProps) {
   const date = new Date(article.updatedAt).getDate();
   const month = new Date(article.updatedAt).getMonth() + 1;
   const year = new Date(article.updatedAt).getFullYear();
@@ -46,16 +41,6 @@ function Article({ article }: ArticleProps) {
           </div>
         </div>
       </div>
-    </div>
-  );
-}
-
-export default function ArticleList({ articleList }: ArticleListProps) {
-  return (
-    <div>
-      {articleList.map((article) => (
-        <Article key={article.id} article={article} />
-      ))}
     </div>
   );
 }

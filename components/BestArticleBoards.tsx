@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { ArticleType } from "@/types/type";
 import DropdownMenu from "./DropdownMenu";
 import axios from "@/lib/axios";
-import BestArticleList from "./BestArticle";
+import BestArticleList from "./BestArticleList";
 import styles from "@/styles/BestArticleBoards.module.css";
 
 import { getBestArticle } from "@/pages/api/api";

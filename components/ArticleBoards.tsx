@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { ArticleType } from "@/types/type";
 import DropdownMenu from "./DropdownMenu";
 import axios from "@/lib/axios";
-import ArticleList from "./Article";
+import ArticleList from "./ArticleList";
 import styles from "@/styles/ArticleBoards.module.css";
 import search from "@/public/search.svg";
 import Image from "next/image";

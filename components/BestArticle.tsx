@@ -3,17 +3,13 @@ import { ArticleType } from "@/types/type";
 import Image from "next/image";
 import styles from "@/styles/BestArticle.module.css";
 import heart from "@/public/heart.svg";
+import BestArticleList from "./BestArticleList";
 
 interface BestArticleProps {
   article: ArticleType;
 }
 
-interface BestArticleListProps {
-  //게시글 목록
-  articleList: ArticleType[];
-}
-
-function BestArticle({ article }: BestArticleProps) {
+export default function BestArticle({ article }: BestArticleProps) {
   const date = new Date(article.updatedAt).getDate();
   const month = new Date(article.updatedAt).getMonth() + 1;
   const year = new Date(article.updatedAt).getFullYear();
@@ -57,15 +53,5 @@ function BestArticle({ article }: BestArticleProps) {
         </div>
       </div>
     </>
-  );
-}
-
-export default function BestArticleList({ articleList }: BestArticleListProps) {
-  return (
-    <div className={styles["Boards-container"]}>
-      {articleList.map((article) => (
-        <BestArticle key={article.id} article={article} />
-      ))}
-    </div>
   );
 }
