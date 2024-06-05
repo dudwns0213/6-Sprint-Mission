@@ -6,6 +6,8 @@ import axios from "@/lib/axios";
 import BestArticleList from "./BestArticle";
 import styles from "@/styles/BestArticleBoards.module.css";
 
+import { getBestArticle } from "@/pages/api/api";
+
 export default function BestArticleBoards() {
   const [article, setArticle] = useState<ArticleType[]>([]);
   const [orderby, setOrderby] = useState("like");
@@ -13,17 +15,12 @@ export default function BestArticleBoards() {
   const [page, setPage] = useState(1);
   const [pageSize, setPageSize] = useState(3);
 
-  async function getArticle() {
-    const res = await axios.get(
-      `/articles?page=${page}&pageSize=${pageSize}&orderBy=${orderby}`
-    );
-
-    const articlelist = res.data.list;
-    setArticle(articlelist);
-  }
-
   useEffect(() => {
-    getArticle();
+    async function fetchArticle() {
+      const articleList = await getBestArticle(page, pageSize, orderby);
+      setArticle(articleList);
+    }
+    fetchArticle();
   }, [page, pageSize]);
 
   useEffect(() => {
