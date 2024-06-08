@@ -1,12 +1,9 @@
-import instance from "@/lib/axios";
 import { useEffect, useState } from "react";
 import { ArticleType } from "@/types/type";
-import DropdownMenu from "./DropdownMenu";
-import axios from "@/lib/axios";
 import BestArticleList from "./BestArticleList";
 import styles from "@/styles/BestArticleBoards.module.css";
 
-import { getBestArticle } from "@/pages/api/api";
+import { getBestArticle } from "@/api/api";
 
 export default function BestArticleBoards() {
   const [article, setArticle] = useState<ArticleType[]>([]);

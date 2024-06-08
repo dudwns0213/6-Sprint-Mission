@@ -1,6 +1,7 @@
 import { ArticleType } from "@/types/type";
-import Article from "@/components/Article"; // 경로는 실제 프로젝트 구조에 맞게 조정해야 합니다.
+import Article from "./Article";
 import styles from "@/styles/Article.module.css";
+import Link from "next/link";
 
 interface ArticleListProps {
   articleList: ArticleType[];

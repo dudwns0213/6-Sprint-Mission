@@ -1,14 +1,13 @@
-import instance from "@/lib/axios";
 import { useEffect, useState } from "react";
 import { ArticleType } from "@/types/type";
-import DropdownMenu from "./DropdownMenu";
-import axios from "@/lib/axios";
+import DropdownMenu from "@/components/DropdownMenu";
 import ArticleList from "./ArticleList";
 import styles from "@/styles/ArticleBoards.module.css";
 import search from "@/public/search.svg";
 import Image from "next/image";
 
-import { getArticle } from "@/pages/api/api";
+import { getArticle } from "@/api/api";
+import Link from "next/link";
 
 export default function ArticleBoards() {
   const [article, setArticle] = useState<ArticleType[]>([]);
@@ -37,7 +36,9 @@ export default function ArticleBoards() {
     <>
       <div className={styles["Boards-header"]}>
         <div className={styles["Boards-header-title"]}>게시글</div>
-        <div className={styles["Boards-header-writing"]}>글쓰기</div>
+        <Link href="/addboard">
+          <div className={styles["Boards-header-writing"]}>글쓰기</div>
+        </Link>
       </div>
       <div className={styles["Boards-container"]}>
         <input
