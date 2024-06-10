@@ -1,12 +1,13 @@
-import instance from "@/lib/axios";
 import { useEffect, useState } from "react";
 import { ArticleType } from "@/types/type";
-import DropdownMenu from "./DropdownMenu";
-import axios from "@/lib/axios";
-import ArticleList from "./Article";
+import DropdownMenu from "@/components/DropdownMenu";
+import ArticleList from "./ArticleList";
 import styles from "@/styles/ArticleBoards.module.css";
 import search from "@/public/search.svg";
 import Image from "next/image";
+
+import { getArticle } from "@/api/api";
+import Link from "next/link";
 
 export default function ArticleBoards() {
   const [article, setArticle] = useState<ArticleType[]>([]);
@@ -16,22 +17,18 @@ export default function ArticleBoards() {
   const [page, setPage] = useState(1);
   const [pageSize, setPageSize] = useState(10);
 
-  async function getArticle() {
-    const res = await axios.get(
-      `/articles?page=${page}&pageSize=${pageSize}&orderBy=${orderby}&keyword=${keyword}`
-    );
-
-    const articlelist = res.data.list;
-    setArticle(articlelist);
+  async function fetchArticle() {
+    const articleList = await getArticle(page, pageSize, orderby, keyword);
+    setArticle(articleList);
   }
 
   useEffect(() => {
-    getArticle();
+    fetchArticle();
   }, [page, pageSize, orderby]);
 
   const handleKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
     if (event.key === "Enter") {
-      getArticle();
+      fetchArticle();
     }
   };
 
@@ -39,7 +36,9 @@ export default function ArticleBoards() {
     <>
       <div className={styles["Boards-header"]}>
         <div className={styles["Boards-header-title"]}>게시글</div>
-        <div className={styles["Boards-header-writing"]}>글쓰기</div>
+        <Link href="/addboard">
+          <div className={styles["Boards-header-writing"]}>글쓰기</div>
+        </Link>
       </div>
       <div className={styles["Boards-container"]}>
         <input

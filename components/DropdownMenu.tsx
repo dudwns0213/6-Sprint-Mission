@@ -8,27 +8,30 @@ interface DropDownProps {
   orderBySort: (orderby: string) => void;
 }
 
+type SelectedOption = "recent" | "like";
+
 export default function DropdownMenu({ orderBySort }: DropDownProps) {
   const [isOpen, setIsOpen] = useState(false);
-  const [selectedOption, setSelectedOption] = useState<string>("최신순");
+  const [selectedOption, setSelectedOption] =
+    useState<SelectedOption>("recent");
 
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
   };
 
-  const handleOptionClick = (value: string) => {
+  const handleOptionClick = (value: "recent" | "like") => {
     setSelectedOption(value);
-    if (selectedOption === "최신순") {
-      orderBySort("recent");
-    } else {
-      orderBySort("like");
-    }
+    orderBySort(value);
+  };
+
+  const getOptionText = (option: "recent" | "like"): string => {
+    return option === "recent" ? "최신순" : "좋아요순";
   };
 
   return (
     <div className={styles.dropdown}>
       <button onClick={toggleDropdown} className={styles["dropdown-toggle"]}>
-        <div>{selectedOption}</div>
+        <div>{getOptionText(selectedOption)}</div>{" "}
         <Image
           className={styles["dropdown-toggle-img"]}
           width={24}
@@ -47,13 +50,13 @@ export default function DropdownMenu({ orderBySort }: DropDownProps) {
       {isOpen && (
         <div className={styles["dropdown-menu"]}>
           <div
-            onClick={() => handleOptionClick("최신순")}
+            onClick={() => handleOptionClick("recent")}
             className={styles["dropdown-item"]}
           >
             최신순
           </div>
           <div
-            onClick={() => handleOptionClick("좋아요순")}
+            onClick={() => handleOptionClick("like")}
             className={styles["dropdown-item"]}
           >
             좋아요순

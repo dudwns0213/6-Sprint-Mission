@@ -53,13 +53,14 @@ export default function Header() {
           </div>
         </div>
         <div className={styles["Header-profile"]}>
-          <Link href="/">
-            <Image
+          <Link href="/signin">
+            로그인
+            {/* <Image
               width={40}
               height={40}
               src={userProfile}
               alt="유저 프로필 사진"
-            />
+            /> */}
           </Link>
         </div>
       </div>

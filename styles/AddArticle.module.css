@@ -1,0 +1,67 @@
+.container {
+  padding: 16px;
+}
+.containerTablet {
+  padding: 16px 24px;
+}
+.containerDesktop {
+  max-width: 1200px;
+  padding: 24px 0;
+  margin: 0 auto;
+}
+
+.sectionTitle {
+  font-size: 20px;
+  font-weight: bold;
+  color: #1f2937; /* CSS 모듈에서 직접적인 값 대입이 필요합니다. */
+}
+.sectionTitleTablet {
+  font-size: 28px;
+}
+
+.flexContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.button {
+  background-color: #3692ff;
+  color: #fff;
+  padding: 11.5px 23px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+}
+.buttonHover {
+  background-color: #1967d6; /* 호버 상태는 React 컴포넌트 내에서 처리해야 합니다. */
+}
+.buttonFocus {
+  background-color: #1251aa; /* 포커스 상태는 React 컴포넌트 내에서 처리해야 합니다. */
+}
+.buttonDisabled {
+  background-color: #9ca3af; /* 비활성화 상태는 React 컴포넌트 내에서 처리해야 합니다. */
+  cursor: default;
+  pointer-events: none;
+}
+
+.titleSection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.inputSection {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+@media screen and (min-width: 768px) {
+  .inputSection {
+    gap: 24px;
+  }
+}

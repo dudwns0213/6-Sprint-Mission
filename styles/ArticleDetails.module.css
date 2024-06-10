@@ -1,0 +1,87 @@
+.detailsWrapper {
+  min-width: 380px;
+  width: 100%;
+  max-width: 1230px;
+  margin: 0px;
+}
+
+.detailsContainer {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 40px;
+}
+
+.detailsImg {
+  margin: 60px 0px 30px 0px;
+}
+
+.detailsTop,
+.detailsBottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px; /* detailsBottom의 경우 실제로는 20px이지만, 이후 border-bottom으로 인한 시각적 간격을 고려해 조정 필요 */
+}
+
+.detailsTitle {
+  font-weight: 700;
+  font-size: 20px;
+  color: #26282b;
+}
+
+.detailsBottom {
+  gap: 8px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e5e7eb;
+  justify-content: flex-start; /* detailsTop과 다르게 설정 */
+}
+
+.profileSection,
+.likeSection {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.profileSection {
+  border-right: solid 1px #e5e7eb;
+  padding-right: 8px;
+}
+
+.writer,
+.createdAt,
+.likeCount {
+  font-weight: 400;
+  font-size: 14px;
+  color: #454c53;
+}
+
+.createdAt,
+.likeCount {
+  font-size: 12px;
+  color: #9ea4a8;
+}
+
+.likeIcon {
+  position: relative;
+  top: 1px;
+}
+
+.detailsContent,
+.detailsMetadata {
+  font-size: 16px;
+  font-weight: 400;
+  color: #26282b;
+  margin-top: 20px;
+}
+
+.editButton {
+  width: 24px;
+  height: 24px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
