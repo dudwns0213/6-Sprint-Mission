@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import styles from "@/styles/DropdownMenu.module.css";
 import Image from "next/image";
-import arrowdown from "@/public/arrowdown.svg";
-import sort from "@/public/sort.svg";
+import arrowdown from "@/public/icon/ic_arrowdown.svg";
+import sort from "@/public/icon/ic_sort.svg";
 
 interface DropDownProps {
   orderBySort: (orderby: string) => void;

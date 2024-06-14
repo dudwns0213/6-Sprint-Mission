@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Label } from "./InputItem";
 import styled, { css } from "styled-components";
-import PlusIcon from "@/public/ic_plus.svg";
+import PlusIcon from "@/public/icon/ic_plus.svg";
 import DeleteButton from "./DeleteButton";
 import Image from "next/image";
 

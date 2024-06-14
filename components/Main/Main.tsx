@@ -2,15 +2,15 @@ import React from "react";
 import styles from "@/styles/Main.module.css";
 import Image from "next/image";
 import Link from "next/link";
-import img_header from "@/public/img_header_1.png";
-import img_footer from "@/public/img_footer_1.png";
-import img_main_1 from "@/public/img_main_1.png";
-import img_main_2 from "@/public/img_main_2.png";
-import img_main_3 from "@/public/img_main_3.png";
-import ic_facebook from "@/public/ic_facebook.png";
-import ic_twitter from "@/public/ic_twitter.png";
-import ic_youtube from "@/public/ic_youtube.png";
-import ic_instagram from "@/public/ic_instagram.png";
+import img_header from "@/public/img/img_header_1.png";
+import img_footer from "@/public/img/img_footer_1.png";
+import img_main_1 from "@/public/img/img_main_1.png";
+import img_main_2 from "@/public/img/img_main_2.png";
+import img_main_3 from "@/public/img/img_main_3.png";
+import ic_facebook from "@/public/icon/ic_facebook.png";
+import ic_twitter from "@/public/icon/ic_twitter.png";
+import ic_youtube from "@/public/icon/ic_youtube.png";
+import ic_instagram from "@/public/icon/ic_instagram.png";
 
 export default function Main() {
   return (
@@ -95,10 +95,10 @@ export default function Main() {
           </div>
           <Image
             className={styles.buypanda}
-            src={img_header}
+            src={img_footer}
             alt="판다마켓 이미지"
-            width={500}
-            height={500}
+            width={600}
+            height={400}
           />
         </div>
       </section>

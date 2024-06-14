@@ -7,9 +7,9 @@ import ArticleDetails from "@/components/Addboards/ArticleDetails";
 import styled from "styled-components";
 import InputItem from "@/components/InputItem";
 import Link from "next/link";
-import ic_back from "@/public/ic_back.svg";
+import ic_back from "@/public/icon/ic_back.svg";
 import Image from "next/image";
-import nonecomments from "@/public/nonecomments.svg";
+import nonecomments from "@/public/img/img_nonecomments.svg";
 
 export default function ArticleComment() {
   const router = useRouter();
