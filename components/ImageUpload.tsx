@@ -7,12 +7,10 @@ import Image from "next/image";
 
 interface ImageUploadProps {
   title?: string;
+  setImage: (file: File | string | null) => void;
 }
 
-function ImageUpload({
-  title,
-  setImage,
-}: ImageUploadProps & { setImage: (file: File | string | null) => void }) {
+function ImageUpload({ title, setImage }: ImageUploadProps) {
   const [imagePreviewUrl, setImagePreviewUrl] = useState<string>("");
 
   const handleImageChange = (event: React.ChangeEvent<HTMLInputElement>) => {
